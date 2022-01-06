@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhor Player De música Online</title>
+<link rel="shortcut icon" href="./face-troll.gif" type="image/x-icon">
+<style>
+
+#credito
+{
+
+background-color: white;
+text-align: center;
+padding: 100px;
+font-size: large;
+color: black;
+}
+
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin: 0;
+padding: 0;
+background-color: darkorchid;
+overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+h1{
+  
+    margin-top: 0;
+text-align: center;
+background-color: white;
+padding: 3rem;
+margin: -10px;
+}
+
+
+
+#container
+{
+position:relative;
+padding:10vw;
+margin-left: 30vw;
+}
+.audio{
+box-sizing: border-box;
+overflow: hidden;
+background-color: #f1f3f4;
+}
+audio{
+    width:100vw ;
+margin: -10px;
+}
+
+
+.butom{
+border-radius: 30px;
+display: flex;
+outline: none;
+    cursor: pointer;
+border: none;
+background-color: aliceblue;
+padding: 10px;
+
+margin-bottom: 10px;
+margin-left: 5px;
+width: 5rem;
+}
+.butom:hover{
+
+background-color: red;
+animation-duration: 1s;
+}
+
+input{
+text-align: center;
+width: 5rem;
+border-radius: 12px;
+outline: none;
+border: none;
+padding: 2px;
+margin-bottom: 10px;
+float: right;
+}
+.input1{
+
+
+float: none;
+padding: 10px;
+margin-left: 3vw;
+width: 40%;
+
+}
+
+
+.um{
+width:2rem ;
+margin-left: 2rem;
+
+}
+
+.texts:hover{
+
+color:rgb(16, 122, 214);
+cursor: pointer;
+
+}
+
+.texts{
+    color: white; 
+     margin: 0;
+      text-align: center ;
+      margin-bottom: 40px;
+      box-sizing: border-box;
+}
+
+#num{
+    padding: 0;
+    margin-bottom: 10px;
+
+}
+</style>
+
+
+
+
+</head>
+<body>
+
+
+
+
+    <input class ="input1" type="url" name="" placeholder="URL do Audio" id="url1" >
+    <input class ="input1" type="text" name="" placeholder="nome da musica" id="NDM" >
+                                
+                            
+                                            <br><br><br>
+
+
+    <h2 class="texts"onclick="mudarAudio()">Enviar Url</h2>
+    <h2 style="text-align: center;">Ou</h2>
+    <h2 class="texts" onclick="randomMusic()" >Escolher Aleatório da Biblioteca</h2>
+    
+    <h1 id="nomeDaMusica">Audio</h1>
+
+    <div class="audio" id ="audio-container">  <audio id="audio" preload="auto" controls src="./original.mp3"></audio></div>  <div id="container">
+
+
+    <h1 id="num" style="transform:translateX(-30%);background-color: darkorchid;">00:00</h4>
+
+
+        <button id="reproduzir" onclick="tocar()" class="butom">play</button>
+        <button id="pausar" onclick="pausar()" class="butom">Pausar</button>
+
+    <button id="aumentarSom" onclick = "aumentar_Som()"class="butom um">+</button>
+    <button id="diminuir-som" onclick ="diminuir_Som()" class="butom um">-</button>
+    <button id="mudo" onclick="mudo()" class="butom">Mudo</button>
+    <button id="aumentar-vel" onclick = "aumentar_vel()" class="butom um">^</button>
+
+
+
+    
+              <h3>Velocidade:<p id="vel" style="text-align: center ;">01</p></h3>
+    <button id="diminuir-vel" onclick ="diminuir_vel()" class="butom um">v</button>
+<div>
+    <button id="pular-para" onclick = "IrPara()" class="butom">Ir para</button>
+    <inputs>
+    <input type="number" id="second" class="tempo" placeholder="second">
+    <input id="minute"  class="tempo" type="number" placeholder="minute">
+    </inputs>
+    <button id="pular-para-inicio" class="butom" onclick="PPinicio()">Pular para Início</button>
+</div>
+
+
+
+
+    <button id="pular5s" onclick="avancar5s()" class="butom">Avançar 5 segundos</button>
+    <button id="recuar5s" onclick="recuar5s()" class="butom">Recuar 5 segundos</button>
+
+   
+   
+   
+    <h2>Definir Intervalo</h2>
+    <button class="butom" id = "pontoA" >Ponto A</button>
+    <button class="butom"  id ="pontoB">Ponto B</button>
+    <input type="button"  id = "pontob" value ="final">
+    <input type="button" id ="pontoa" value="início">
+
+
+    <button onclick="limparkk()"class="butom">Eliminar intervalo</button>
+    <button onclick="repetir()"class="butom" id="repetir">Loop</button>
+
+</div>
+
+
+
+<div id="credito">Desenvolvido por <a href="https://api.whatsapp.com/send?phone=244925783555&text=Eu%20visitei%20o%20site%2C%20que%20site%20maravilhoso(%C2%A0%CD%A1%C2%B0%C2%A0%CD%9C%CA%96%20%CD%A1%C2%B0)" target="_blank" rel="noopener noreferrer">Waldemar d'Orey</a></div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
